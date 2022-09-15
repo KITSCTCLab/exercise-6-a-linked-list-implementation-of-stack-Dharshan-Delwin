@@ -9,16 +9,23 @@ class Stack:
     self.head = None
 
   def push(self, data) -> None:
-    # Write your code here
+      node = Node(data)
+      node.next = self.head
+      self.head = node
 
   def pop(self) -> None:
-    # Write your code here
+    if(self.head is not None):
+      self.head = self.head.next
 
   def status(self):
-    """
-    It prints all the elements of stack.
-    """
-    # Write your code here  
+   itr = self.head
+  if(self.head in None):
+    print("Node is empty")
+  else:
+    while(itr):
+      print(itr.data,end="=")
+      itr = itr.next
+    print("None")
 
 
 # Do not change the following code
