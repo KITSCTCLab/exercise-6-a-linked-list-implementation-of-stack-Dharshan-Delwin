@@ -14,18 +14,18 @@ class Stack:
       self.head = node
 
   def pop(self) -> None:
-    if(self.head is not None):
-      self.head = self.head.next
+      if(self.head is not None):
+          self.head = self.head.next
 
   def status(self):
-   itr = self.head
-  if(self.head in None):
-    print("Node is empty")
-  else:
-    while(itr):
-      print(itr.data,end="=")
-      itr = itr.next
-    print("None")
+    ptr = self.head
+    if(self.head is None):
+        print("None")
+    else:
+        while (ptr):
+            print(ptr.data, end="=>")
+            ptr = ptr.next
+        print("None")
 
 
 # Do not change the following code
